@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.nudgehost/file-hosting",
+  "title": "NudgeHost",
+  "description": "File hosting for agents. Upload any file, get a public link in seconds.",
+  "repository": {
+    "url": "https://github.com/NudgeHost/nudgehost-mcp",
+    "source": "github"
+  },
+  "version": "1.0.2",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.nudgehost.com/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "\"Bearer \" followed by a NudgeHost API key from the dashboard.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
