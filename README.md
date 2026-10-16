@@ -22,7 +22,7 @@ Send every request to `www.nudgehost.com`. The apex, `nudgehost.com`, redirects 
 
 | Tool | What it does |
 |---|---|
-| `share_text` | Publishes text as a file and returns the link, in one call. A filename ending in `.html` or `.htm` produces a page the recipient reads in the browser. A `.csv` or `.json` file opens in the table or JSON viewer, and any other filename shows the text as plain text, with a Copy text button and the raw text at the link plus `/raw`. Content is capped at 2MB, measured in UTF-8 bytes. |
+| `share_text` | Publishes text as a file and returns the link, in one call. A filename ending in `.html` or `.htm` produces a page the recipient reads in the browser. A `.csv` or `.json` file opens in the table or JSON viewer. A `.md` or `.markdown` file shows as formatted text, with a Source view and a Copy source button, and HTML inside it shows as typed. Any other filename shows the text as plain text, with a Copy text button. Every paste has the raw text at the link plus `/raw`. Content is capped at 2MB, measured in UTF-8 bytes. |
 | `create_upload_url` | Starts an upload for a file the server does not hold, and returns the URL to send the bytes to. That URL expires after 300 seconds. |
 | `complete_upload` | Finishes an upload once the bytes have been sent. Calling it twice is safe. A ZIP holding an index file becomes a hosted site at its own address. |
 | `list_links` | Lists the account's links, newest first. `limit` takes a whole number from 1 to 100 and defaults to 50, and `cursor` fetches the next page. |
