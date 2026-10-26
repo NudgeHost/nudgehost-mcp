@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "nudgehost": {
+      "url": "https://www.nudgehost.com/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${NUDGEHOST_API_KEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "nudgehost",
+  "description": "Publish text, web pages and files from Cursor as public NudgeHost links, and list the links on your account.",
+  "version": "1.0.0",
+  "author": {
+    "name": "NudgeHost",
+    "email": "support@nudgehost.com"
+  },
+  "homepage": "https://www.nudgehost.com",
+  "repository": "https://github.com/NudgeHost/nudgehost-mcp",
+  "license": "MIT",
+  "keywords": ["file hosting", "file sharing", "links", "static site", "mcp"],
+  "logo": "assets/logo.png",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "NUDGEHOST_API_KEY": {
+        "type": "string",
+        "title": "NudgeHost API key",
+        "description": "An API key from the API keys panel of your NudgeHost dashboard."
+      }
+    },
+    "required": ["NUDGEHOST_API_KEY"]
+  }
+}

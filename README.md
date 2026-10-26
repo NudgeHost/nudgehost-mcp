@@ -74,6 +74,10 @@ bearer_token_env_var = "NUDGEHOST_API_KEY"
 
 The Codex CLI test covered connecting and listing links.
 
+## Cursor plugin
+
+This repository is also a Cursor plugin. Its mcp.json points Cursor at the server above, and .cursor-plugin/plugin.json declares one required setting, NUDGEHOST_API_KEY, for an API key from the API keys panel of your NudgeHost dashboard. The plugin holds no key itself.
+
 ## Example
 
 [Publishing a ZIP as a site from Cursor](examples/publish-a-zip-with-cursor.md) walks through the three steps that turn a folder into a live site.
