@@ -10,7 +10,7 @@ The server is listed in the official MCP Registry as `com.nudgehost/file-hosting
 
 ## You need an API key
 
-The MCP server's tools act on a NudgeHost account, the same account you upload with on the website, so every request carries an API key. A free account is enough. Every plan can use the API, including the free one, and a free account can hold 2 keys at once.
+The MCP server's tools act on a NudgeHost account, the same account you upload with on the website. Every request carries either an API key or, from a client that supports sign-in such as Claude, an access token from signing in to NudgeHost. A free account is enough. Every plan can use the API, including the free one, and a free account can hold 2 keys at once.
 
 1. Sign up at [nudgehost.com](https://www.nudgehost.com).
 2. Open the API keys panel of your dashboard and create a key. It is shown once, so copy it before you close the panel.
@@ -90,7 +90,7 @@ Each key gets a fixed number of requests per 60 second window, set by the accoun
 - Pro: 60 requests per 60 seconds
 - Studio: 150 requests per 60 seconds
 
-The MCP tools and the REST API share one budget per key. Upload size and the number of live links also depend on the plan, and the [pricing page](https://www.nudgehost.com/pricing) has the current figures.
+The MCP tools and the REST API share one budget per key. A client that signs in gets one budget per account instead, shared by every app signed in to it. Upload size and the number of live links also depend on the plan, and the [pricing page](https://www.nudgehost.com/pricing) has the current figures.
 
 ## Licence
 
