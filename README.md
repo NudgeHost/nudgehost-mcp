@@ -8,7 +8,7 @@ This repository describes NudgeHost's remote MCP server and holds its registry e
 
 The server is listed in the official MCP Registry as `com.nudgehost/file-hosting`. [`server.json`](server.json) in this repository is that entry.
 
-## You need an API key
+## You need an API key or a sign-in
 
 The MCP server's tools act on a NudgeHost account, the same account you upload with on the website. Every request carries either an API key or, from a client that supports sign-in such as Claude, an access token from signing in to NudgeHost. A free account is enough. Every plan can use the API, including the free one, and a free account can hold 2 keys at once.
 
