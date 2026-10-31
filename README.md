@@ -10,7 +10,7 @@ The server is listed in the official MCP Registry as `com.nudgehost/file-hosting
 
 ## You need an API key
 
-The website takes uploads without an account. The MCP server is different, because its tools act on an account, so every request carries an API key. A free account is enough. Every plan can use the API, including the free one, and a free account can hold 2 keys at once.
+The MCP server's tools act on a NudgeHost account, the same account you upload with on the website, so every request carries an API key. A free account is enough. Every plan can use the API, including the free one, and a free account can hold 2 keys at once.
 
 1. Sign up at [nudgehost.com](https://www.nudgehost.com).
 2. Open the API keys panel of your dashboard and create a key. It is shown once, so copy it before you close the panel.
@@ -24,7 +24,7 @@ Send every request to `www.nudgehost.com`. The apex, `nudgehost.com`, redirects 
 |---|---|
 | `share_text` | Publishes text as a file and returns the link, in one call. A filename ending in `.html` or `.htm` produces a page the recipient reads in the browser. A `.csv` or `.json` file opens in the table or JSON viewer. A `.md` or `.markdown` file shows as formatted text, with a Source view and a Copy source button, and HTML inside it shows as typed. Any other filename shows the text as plain text, with a Copy text button. Markdown and plain text also have the raw text at the link plus `/raw`. Content is capped at 2MB, measured in UTF-8 bytes. |
 | `create_upload_url` | Starts an upload for a file the server does not hold, and returns the URL to send the bytes to. That URL expires after 300 seconds. |
-| `complete_upload` | Finishes an upload once the bytes have been sent. Calling it twice is safe. A ZIP holding an index file becomes a hosted site at its own address. |
+| `complete_upload` | Finishes an upload once the bytes have been sent. Calling it twice is safe. A ZIP with a file named `index.html` inside, in any folder, becomes a hosted site at its own address. A ZIP without an `index.html`, or over 100MB, stays a download. |
 | `list_links` | Lists the account's links, newest first. `limit` takes a whole number from 1 to 100 and defaults to 50, and `cursor` fetches the next page. |
 
 ## Connecting a client

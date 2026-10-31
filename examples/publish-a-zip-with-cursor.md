@@ -49,7 +49,7 @@ Cursor finishes the upload with the id from step 1.
 }
 ```
 
-A ZIP holding an index file becomes a hosted site at its own address, so the URL this call returns is the final one, and it can differ from the address step 1 predicted. That returned URL is the link to share.
+A ZIP with a file named `index.html` inside becomes a hosted site at its own address, so the URL this call returns is the final one, and it can differ from the address step 1 predicted. That returned URL is the link to share.
 
 If the URL from step 1 lapses before the bytes arrive, Cursor calls `create_upload_url` again for a fresh one.
 
