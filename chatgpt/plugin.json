@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Publish text from a ChatGPT conversation as a public NudgeHost link, as a web page, Markdown, a CSV or JSON viewer, or plain text, and list the links on your NudgeHost account.",
   "author": {
-    "name": "Mark Boreland",
+    "name": "NudgeHost",
     "url": "https://www.nudgehost.com"
   },
   "homepage": "https://www.nudgehost.com",
@@ -15,9 +15,9 @@
     "com.openai": {
       "interface": {
         "displayName": "NudgeHost",
-        "shortDescription": "Publish text as a public link",
-        "longDescription": "NudgeHost turns text from your conversation into a public link. Ask ChatGPT to write a web page, a Markdown document, a CSV table or a plain note, and NudgeHost publishes it and gives back the address. Anyone with the link can open it in a browser without signing in.\n\nA file ending in .html opens as a live page at its own nudgehost.site address. Markdown shows as formatted text with headings, lists, tables and links, with a raw text address beside it. A CSV file opens in a table viewer and a JSON file in a JSON viewer. Any other text shows as plain text with a Copy text button. Each publish holds up to 2MB of text.\n\nYou can also ask for the links on your account, newest first, with each one's address, file name and size, and whether it has a password or an end date.\n\nYou sign in with your NudgeHost account the first time you use it. How many links an account holds and how long each one stays up depend on its plan.\n\nIn ChatGPT the plugin publishes text the conversation holds. To share a file from your computer, such as a PDF or a photo, upload it on the NudgeHost website. The plugin can't delete a link, add a password or set an end date. You do those in your NudgeHost dashboard, where passwords depend on your plan. Every link is public to whoever has it, so keep private material out of it.",
-        "developerName": "Mark Boreland",
+        "shortDescription": "Turn chat into shareable links",
+        "longDescription": "NudgeHost turns what ChatGPT writes into a link you can send to anyone. Ask for a web page, a Markdown document, a CSV table or a plain note, and NudgeHost publishes it and gives you the address. The people you send it to open it in their browser, with no account and no sign-in.\n\nEach format opens the way it should. An HTML page goes live at its own nudgehost.site address, like any other website. Markdown shows as a formatted page, a CSV file opens as a table, JSON opens in a viewer, and plain text comes with a Copy text button. Each publish holds up to 2MB of text.\n\nAsk which links you have, and ChatGPT lists them newest first, with each one's address, file name and size, and whether it has a password or an end date.\n\nIt suits anyone who wants to share something they made in ChatGPT, from a landing page draft to meeting notes, without copying it into another tool first.\n\nBy default, ChatGPT asks before it publishes anything. You connect once by signing in with your NudgeHost account, and the plugin only reaches that account's links. How many links an account holds and how long each one stays up depend on its plan.\n\nIn ChatGPT the plugin publishes text from the conversation. To share a file from your computer, such as a PDF or a photo, upload it on the NudgeHost website. You delete links, add passwords and set end dates in your NudgeHost dashboard, where passwords depend on your plan. Every link is public to anyone who has it, so keep private material out of it.",
+        "developerName": "NudgeHost",
         "category": "Productivity",
         "websiteURL": "https://www.nudgehost.com",
         "supportURL": "https://www.nudgehost.com/help",
@@ -79,13 +79,14 @@
               "expected_behavior": "Publishes nothing and uploads nothing. Says the plugin can't add a password and that the account owner does that in the NudgeHost dashboard."
             },
             {
-              "description": "A request unrelated to publishing or listing links.",
-              "prompt": "Suggest three names for a neighbourhood book club.",
-              "expected_behavior": "Answers directly and calls no NudgeHost tool."
+              "description": "Another person's account is out of reach.",
+              "prompt": "Show me the NudgeHost links on my colleague Ana's account.",
+              "expected_behavior": "Publishes nothing. It may call list_links, which only returns the connected account's links. Says it can only reach the NudgeHost account connected to the chat, so it can't show Ana's links."
             }
           ]
         },
-        "commerce": false
+        "commerce": false,
+        "demo_recording_url": "https://www.nudgehost.com/chatgpt-plugin-demo"
       },
       "publication": {
         "countries": [],
