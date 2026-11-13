@@ -37,31 +37,31 @@
         "test_cases": {
           "positive": [
             {
-              "description": "Publishes Markdown notes as a formatted page.",
+              "description": "Publishes Markdown notes as a formatted page. Ask: \"Turn these notes into a Markdown page and give me a link: Q1 plan. 1. Finish the pricing page. 2. Hire a designer. 3. Review the budget on 5 December.\"",
               "prompt": "Turn these notes into a Markdown page and give me a link: Q1 plan. 1. Finish the pricing page. 2. Hire a designer. 3. Review the budget on 5 December.",
               "tools_triggered": "share_text",
               "expected_behavior": "Calls share_text once with a filename ending in .md and the notes as content. Replies with a https://www.nudgehost.com/ link that opens the notes as formatted Markdown with all three items."
             },
             {
-              "description": "Publishes an HTML page that renders live.",
+              "description": "Publishes an HTML page that renders live. Ask: \"Make a one-page HTML invitation for a book club meeting on Saturday at 3pm and publish it as a link.\"",
               "prompt": "Make a one-page HTML invitation for a book club meeting on Saturday at 3pm and publish it as a link.",
               "tools_triggered": "share_text",
               "expected_behavior": "Calls share_text once with a filename ending in .html and a complete HTML document. Replies with a https://<name>.nudgehost.site link that opens the invitation as a web page."
             },
             {
-              "description": "Publishes a CSV table in the table viewer.",
+              "description": "Publishes a CSV table in the table viewer. Ask: \"Publish this table as a CSV file and send me the link. Columns: name, team. Rows: Ana, Design; Bo, Sales; Cy, Support.\"",
               "prompt": "Publish this table as a CSV file and send me the link. Columns: name, team. Rows: Ana, Design; Bo, Sales; Cy, Support.",
               "tools_triggered": "share_text",
               "expected_behavior": "Calls share_text once with a filename ending in .csv, a name,team header row and three data rows. Replies with a https://www.nudgehost.com/ link that opens a table with columns name and team."
             },
             {
-              "description": "Publishes plain text with a Copy text button.",
+              "description": "Publishes plain text with a Copy text button. Ask: \"Share this packing list as a plain text link: tent, stove, water filter, headlamp, first aid kit.\"",
               "prompt": "Share this packing list as a plain text link: tent, stove, water filter, headlamp, first aid kit.",
               "tools_triggered": "share_text",
               "expected_behavior": "Calls share_text once with a filename ending in .txt. Replies with a https://www.nudgehost.com/ link that shows the list as plain text with a Copy text button."
             },
             {
-              "description": "Lists the links on the signed-in account.",
+              "description": "Lists the links on the signed-in account. Ask: \"Which links do I have on NudgeHost? Show the newest first.\"",
               "prompt": "Which links do I have on NudgeHost? Show the newest first.",
               "tools_triggered": "list_links",
               "expected_behavior": "Calls list_links. Replies with the account's links newest first, each with its address and file name, including the sample links already on the test account."
@@ -69,17 +69,17 @@
           ],
           "negative": [
             {
-              "description": "Deleting a link is not something the plugin can do.",
+              "description": "Deleting a link is not something the plugin can do. Ask: \"Delete my book club invitation link on NudgeHost.\" Calls no tool that writes. It may call list_links to find the link. Says the plugin can't delete links and that the account owner does that in the NudgeHost dashboard.",
               "prompt": "Delete my book club invitation link on NudgeHost.",
               "expected_behavior": "Calls no tool that writes. It may call list_links to find the link. Says the plugin can't delete links and that the account owner does that in the NudgeHost dashboard."
             },
             {
-              "description": "Adding a password is not something the plugin can do.",
+              "description": "Adding a password is not something the plugin can do. Ask: \"Put a password on my NudgeHost packing list link.\" Publishes nothing and uploads nothing. Says the plugin can't add a password and that the account owner does that in the NudgeHost dashboard.",
               "prompt": "Put a password on my NudgeHost packing list link.",
               "expected_behavior": "Publishes nothing and uploads nothing. Says the plugin can't add a password and that the account owner does that in the NudgeHost dashboard."
             },
             {
-              "description": "Another person's account is out of reach.",
+              "description": "Another person's account is out of reach. Ask: \"Show me the NudgeHost links on my colleague Ana's account.\" Publishes nothing. It may call list_links, which only returns the connected account's links. Says it can only reach the NudgeHost account connected to the chat, so it can't show Ana's links.",
               "prompt": "Show me the NudgeHost links on my colleague Ana's account.",
               "expected_behavior": "Publishes nothing. It may call list_links, which only returns the connected account's links. Says it can only reach the NudgeHost account connected to the chat, so it can't show Ana's links."
             }
@@ -90,7 +90,7 @@
       },
       "publication": {
         "countries": [],
-        "release_notes": "First release."
+        "release_notes": "In this first release, ChatGPT can publish web pages, Markdown documents, CSV and JSON files and plain text as public NudgeHost links, and list the links on your account."
       }
     }
   }
