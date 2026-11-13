@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "nudgehost": {
+      "type": "streamable-http",
+      "url": "https://www.nudgehost.com/api/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            },
+            "oidcEnabled": false
+          }
+        }
+      }
+    }
+  }
+}
