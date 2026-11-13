@@ -10,7 +10,7 @@ The server is listed in the official MCP Registry as `com.nudgehost/file-hosting
 
 ## You need an API key or a sign-in
 
-The MCP server's tools act on a NudgeHost account, the same account you upload with on the website. Every request carries either an API key or, from a client that supports sign-in such as Claude, an access token from signing in to NudgeHost. A free account is enough. Every plan can use the API, including the free one. A free account made from 19 November 2026 holds 1 key at a time, and Lite and older free accounts hold 2.
+The MCP server's tools act on a NudgeHost account, the same account you upload with on the website. Every request carries either an API key or, from a client that supports sign-in such as Claude, an access token from signing in to NudgeHost. A free account is enough. Every plan can use the API, including the free one. A free account made from 12 November 2026 holds 1 key at a time, and Lite and older free accounts hold 2.
 
 1. Sign up at [nudgehost.com](https://www.nudgehost.com).
 2. Open the API keys panel of your dashboard and create a key. It is shown once, so copy it before you close the panel.
